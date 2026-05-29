@@ -35,6 +35,7 @@ export async function startup() {
     options: [
       { value: "cli", label: "CLI" },
       { value: "gui", label: "GUI" },
+      { value: "exit", label: "Exit" },
     ],
   });
 
@@ -46,5 +47,8 @@ export async function startup() {
     console.log(chalk.dim("starting cli mode..."));
   } else if (mode === "gui") {
     console.log(chalk.dim("starting gui mode..."));
+  } else if (mode === "exit") {
+    console.log(chalk.dim("goodbye."));
+    process.exit(0);
   }
 }
