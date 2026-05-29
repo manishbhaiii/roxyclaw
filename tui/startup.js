@@ -1,6 +1,7 @@
 import { select, isCancel } from "@clack/prompts";
 import chalk from "chalk";
 import figlet from "figlet";
+import { runCliMode } from "../modes/cli.js";
 
 const BANNER_FONT = "ANSI Shadow";
 const SHADOW = chalk.hex("#860090");
@@ -44,7 +45,7 @@ export async function startup() {
   }
 
   if (mode === "cli") {
-    console.log(chalk.dim("starting cli mode..."));
+    await runCliMode();
   } else if (mode === "gui") {
     console.log(chalk.dim("starting gui mode..."));
   } else if (mode === "exit") {
