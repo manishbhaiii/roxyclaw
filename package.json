@@ -7,8 +7,10 @@
     "roxyclaw": "./index.js"
   },
   "dependencies": {
+    "@ai-sdk/openai-compatible": "^2.0.48",
     "@clack/core": "^1.3.1",
     "@clack/prompts": "^1.4.0",
+    "ai": "^6.0.193",
     "chalk": "^5.6.2",
     "commander": "^14.0.3",
     "figlet": "^1.11.0"
